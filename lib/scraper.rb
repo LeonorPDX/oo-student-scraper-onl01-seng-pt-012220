@@ -9,7 +9,6 @@ class Scraper
     students = []
     
     doc.css(".student-card").each do |student|
-#      binding.pry
       data = {
         :name => student.css("h4").text,
         :location => student.css(".student-location").text,
@@ -22,10 +21,13 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
+    doc = Nokogiri::HTML(open(profile_url))
+    
+    binding.pry
     
   end
 
 end
 
-#Scraper.scrape_index_page("https://learn-co-curriculum.github.io/student-scraper-test-page/")
+Scraper.scrape_profile_page("https://learn-co-curriculum.github.io/student-scraper-test-page/")
 
