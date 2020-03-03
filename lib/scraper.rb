@@ -31,7 +31,7 @@ class Scraper
 #      :github => doc.css(),
 #      :blog => doc.css(),
 #      :profile_quote => doc.css(),
-#      :bio => doc.css()
+#      :bio => doc.css("p").text
 #    }
     
   end
