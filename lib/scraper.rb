@@ -25,14 +25,14 @@ class Scraper
     
     binding.pry
     
-    {
-      :twitter => doc.css(),
-      :linkedin => doc.css(),
-      :github => doc.css(),
-      :blog => doc.css(),
-      :profile_quote => doc.css(),
-      :bio => doc.css()
-    }
+#    {
+#      :twitter => doc.css(),
+#      :linkedin => doc.css(),
+#      :github => doc.css(),
+#      :blog => doc.css(),
+#      :profile_quote => doc.css(),
+#      :bio => doc.css()
+#    }
     
   end
 
