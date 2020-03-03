@@ -25,7 +25,7 @@ class Scraper
     student = {}
     binding.pry
     
-#    doc.css(".social-icon-container a")
+#    doc.css(".social-icon-container a").collect{|link| link.attribute("href").value}
 #      :twitter => doc.css(),
 #      :linkedin => doc.css(),
 #      :github => doc.css(),
