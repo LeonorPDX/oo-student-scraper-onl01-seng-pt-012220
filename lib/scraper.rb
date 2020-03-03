@@ -23,27 +23,28 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML(open(profile_url))
     student = {}
-    binding.pry
     
     links = doc.css(".social-icon-container a").collect{|link| link.attribute("href").value}
+    
     links.each do |link|
       if link.include?("twitter")
         student[:twitter] = link 
-       elsif link.include?("linkedin")
+      elsif link.include?("linkedin")
         student[:linkedin] = link
       elsif link.include?("github")
          student[:github] = link 
-       else  
+      else  
         student[:blog] = link
       end
+    end
 
       student[:profile_quote] = doc.css(".profile-quote").text,
       student[:bio] = doc.css("p").text
-
-    
+      
+      student
   end
 
 end
 
-Scraper.scrape_profile_page("https://learn-co-curriculum.github.io/student-scraper-test-page/students/ryan-johnson.html")
+#Scraper.scrape_profile_page("https://learn-co-curriculum.github.io/student-scraper-test-page/students/ryan-johnson.html")
 
