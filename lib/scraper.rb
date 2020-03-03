@@ -25,9 +25,18 @@ class Scraper
     
     binding.pry
     
+    {
+      :twitter => doc.css(),
+      :linkedin => doc.css(),
+      :github => doc.css(),
+      :blog => doc.css(),
+      :profile_quote => doc.css(),
+      :bio => doc.css()
+    }
+    
   end
 
 end
 
-Scraper.scrape_profile_page("https://learn-co-curriculum.github.io/student-scraper-test-page/")
+Scraper.scrape_profile_page("https://learn-co-curriculum.github.io/student-scraper-test-page/students/ryan-johnson.html")
 
