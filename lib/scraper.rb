@@ -25,14 +25,14 @@ class Scraper
     student = {}
     binding.pry
     
-#    {
+#    doc.css()
 #      :twitter => doc.css(),
 #      :linkedin => doc.css(),
 #      :github => doc.css(),
 #      :blog => doc.css(),
 
-#      student[:profile_quote] => doc.css(".profile-quote").text,
-#      :bio => doc.css("p").text
+#      student[:profile_quote] = doc.css(".profile-quote").text,
+#      student[:bio] = doc.css("p").text
 
     
   end
